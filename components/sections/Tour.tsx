@@ -21,7 +21,7 @@ export function Tour() {
         >
           <motion.div
             style={{ y }}
-            className="absolute inset-[-8%] bg-[radial-gradient(ellipse_60%_50%_at_30%_30%,rgba(0,230,118,0.16),transparent_60%),radial-gradient(ellipse_50%_50%_at_80%_70%,rgba(0,230,118,0.1),transparent_60%)] bg-[#0a0d0a]"
+            className="absolute inset-[-8%] bg-[radial-gradient(ellipse_60%_50%_at_30%_30%,rgba(154,42,42,0.2),transparent_60%),radial-gradient(ellipse_50%_50%_at_80%_70%,rgba(154,42,42,0.12),transparent_60%)] bg-[#0a0a0a]"
           />
           <div className="absolute inset-0 bg-grid opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />

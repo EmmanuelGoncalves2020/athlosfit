@@ -28,12 +28,12 @@ export function Plans() {
               className={cn(
                 "relative flex flex-col gap-7 rounded-2xl border p-8 transition-all duration-500",
                 plan.highlighted
-                  ? "border-accent/60 bg-surface shadow-[0_0_60px_-15px_rgba(0,230,118,0.35)] lg:-translate-y-4"
+                  ? "border-accent/60 bg-surface shadow-[0_0_60px_-15px_rgba(154,42,42,0.4)] lg:-translate-y-4"
                   : "border-border bg-surface/50 hover:border-white/20",
               )}
             >
               {plan.highlighted && (
-                <span className="absolute -top-3.5 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-accent px-4 py-1.5 font-heading text-[11px] font-bold uppercase tracking-wider text-background">
+                <span className="absolute -top-3.5 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-accent px-4 py-1.5 font-heading text-[11px] font-bold uppercase tracking-wider text-white">
                   <Sparkles size={13} />
                   Mais Popular
                 </span>

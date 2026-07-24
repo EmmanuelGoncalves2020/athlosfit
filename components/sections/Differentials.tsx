@@ -26,7 +26,7 @@ export function Differentials() {
                 variants={revealChildVariants}
                 className="glow-border group relative flex flex-col gap-4 rounded-2xl border border-border bg-surface/60 p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-transparent hover:bg-surface"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-background text-accent transition-all duration-500 group-hover:scale-110 group-hover:border-accent/40 group-hover:shadow-[0_0_24px_rgba(0,230,118,0.35)]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-background text-accent transition-all duration-500 group-hover:scale-110 group-hover:border-accent/40 group-hover:shadow-[0_0_24px_rgba(154,42,42,0.4)]">
                   <Icon size={22} strokeWidth={1.5} />
                 </div>
                 <h3 className="font-heading text-lg font-semibold tracking-wide text-foreground">

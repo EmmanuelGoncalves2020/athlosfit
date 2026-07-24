@@ -56,7 +56,7 @@ export function Transformations() {
                       style={{ width: `${metric.before}%` }}
                     />
                     <motion.div
-                      className="absolute inset-y-0 left-0 rounded-full bg-accent shadow-[0_0_16px_rgba(0,230,118,0.6)]"
+                      className="absolute inset-y-0 left-0 rounded-full bg-accent shadow-[0_0_16px_rgba(154,42,42,0.6)]"
                       initial={{ width: `${metric.before}%` }}
                       whileInView={{ width: `${metric.after}%` }}
                       viewport={{ once: true, amount: 0.6 }}

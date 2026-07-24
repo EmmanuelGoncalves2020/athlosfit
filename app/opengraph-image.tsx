@@ -29,7 +29,7 @@ export default async function Image() {
             width: 480,
             height: 480,
             borderRadius: "50%",
-            background: "rgba(0,230,118,0.35)",
+            background: "rgba(154,42,42,0.4)",
             filter: "blur(140px)",
           }}
         />
@@ -41,17 +41,17 @@ export default async function Image() {
             width: 520,
             height: 520,
             borderRadius: "50%",
-            background: "rgba(0,230,118,0.2)",
+            background: "rgba(154,42,42,0.25)",
             filter: "blur(160px)",
           }}
         />
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           <svg width="64" height="64" viewBox="0 0 30 30" fill="none">
             <path d="M15 2 L27 26 L19.5 26 L15 15.5 L10.5 26 L3 26 Z" fill="#FFFFFF" />
-            <circle cx="15" cy="9.5" r="2.4" fill="#00E676" />
+            <circle cx="15" cy="9.5" r="2.4" fill="#9A2A2A" />
           </svg>
           <div style={{ display: "flex", fontSize: 88, color: "#FFFFFF", letterSpacing: 2 }}>
-            ATHLOS<span style={{ color: "#00E676" }}>FIT</span>
+            ATHLOS<span style={{ color: "#9A2A2A" }}>FIT</span>
           </div>
         </div>
         <div

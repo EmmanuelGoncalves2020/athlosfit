@@ -27,7 +27,7 @@ export function SectionHeading({
       {eyebrow && (
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-4 py-1.5 font-heading text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_2px_rgba(0,230,118,0.8)]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_2px_rgba(154,42,42,0.8)]" />
             {eyebrow}
           </span>
         </Reveal>

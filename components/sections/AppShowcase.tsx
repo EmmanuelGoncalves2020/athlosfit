@@ -39,7 +39,7 @@ function ScreenAgenda() {
             key={i}
             className={cn(
               "flex h-6 items-center justify-center rounded-md text-[9px]",
-              i === 9 ? "bg-accent text-background font-bold" : "bg-white/[0.04] text-white/40",
+              i === 9 ? "bg-accent text-white font-bold" : "bg-white/[0.04] text-white/40",
             )}
           >
             {i + 1}
@@ -98,7 +98,7 @@ function ScreenEvolucao() {
           transition={{ duration: 0.7, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
           className={cn(
             "w-full rounded-t-md",
-            i === bars.length - 1 ? "bg-accent shadow-[0_0_16px_rgba(0,230,118,0.6)]" : "bg-white/15",
+            i === bars.length - 1 ? "bg-accent shadow-[0_0_16px_rgba(154,42,42,0.6)]" : "bg-white/15",
           )}
         />
       ))}
@@ -136,7 +136,7 @@ export function AppShowcase() {
                     className={cn(
                       "flex items-center gap-4 rounded-xl border px-5 py-4 text-left transition-all duration-400",
                       isActive
-                        ? "border-accent/50 bg-surface shadow-[0_0_30px_-10px_rgba(0,230,118,0.4)]"
+                        ? "border-accent/50 bg-surface shadow-[0_0_30px_-10px_rgba(154,42,42,0.45)]"
                         : "border-border bg-transparent hover:border-white/20",
                     )}
                   >

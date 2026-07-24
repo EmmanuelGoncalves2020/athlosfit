@@ -20,7 +20,7 @@ export default function Icon() {
       >
         <svg width="40" height="40" viewBox="0 0 30 30" fill="none">
           <path d="M15 2 L27 26 L19.5 26 L15 15.5 L10.5 26 L3 26 Z" fill="#FFFFFF" />
-          <circle cx="15" cy="9.5" r="2.4" fill="#00E676" />
+          <circle cx="15" cy="9.5" r="2.4" fill="#9A2A2A" />
         </svg>
       </div>
     ),

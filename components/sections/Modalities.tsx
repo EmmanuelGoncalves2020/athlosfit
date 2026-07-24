@@ -8,13 +8,13 @@ import { RevealGroup, revealChildVariants } from "@/components/ui/Reveal";
 import { buildWhatsAppLink } from "@/lib/constants";
 
 const GRADIENTS = [
-  "from-[#0c2418] via-[#0a0a0a] to-[#050505]",
-  "from-[#0a1f16] via-[#0a0a0a] to-[#050505]",
-  "from-[#0d2a1c] via-[#0a0a0a] to-[#050505]",
-  "from-[#091d14] via-[#0a0a0a] to-[#050505]",
-  "from-[#0e2c1e] via-[#0a0a0a] to-[#050505]",
-  "from-[#0a2116] via-[#0a0a0a] to-[#050505]",
-  "from-[#0c2519] via-[#0a0a0a] to-[#050505]",
+  "from-[#2b1010] via-[#0a0a0a] to-[#050505]",
+  "from-[#240e0e] via-[#0a0a0a] to-[#050505]",
+  "from-[#2f1212] via-[#0a0a0a] to-[#050505]",
+  "from-[#210d0d] via-[#0a0a0a] to-[#050505]",
+  "from-[#331414] via-[#0a0a0a] to-[#050505]",
+  "from-[#260f0f] via-[#0a0a0a] to-[#050505]",
+  "from-[#2a1111] via-[#0a0a0a] to-[#050505]",
 ];
 
 export function Modalities() {
