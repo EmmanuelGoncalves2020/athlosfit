@@ -4,6 +4,7 @@ import { SITE_NAME } from "@/lib/constants";
 export const alt = `${SITE_NAME} — Academia Premium de Alta Performance`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const dynamic = "force-static";
 
 export default async function Image() {
   return new ImageResponse(
