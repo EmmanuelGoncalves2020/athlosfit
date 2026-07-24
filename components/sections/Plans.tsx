@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Sparkles } from "lucide-react";
+import { Check, MessageCircle, Sparkles } from "lucide-react";
 import { PLANS } from "@/lib/data";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -16,7 +16,7 @@ export function Plans() {
         <SectionHeading
           eyebrow="Planos"
           title="Escolha o seu nível"
-          description="Sem taxas escondidas. Cancele ou faça upgrade quando quiser, direto pelo app."
+          description="Todos os planos dão acesso à estrutura completa, 24 horas. A diferença está na forma de pagamento."
           className="mb-16"
         />
 
@@ -44,13 +44,16 @@ export function Plans() {
                 <p className="mt-1.5 text-sm text-muted">{plan.description}</p>
               </div>
 
-              <div className="flex items-end gap-1.5">
-                <span className="font-heading text-sm text-muted">R$</span>
-                <span className="font-display text-6xl leading-none tracking-wide text-foreground">
-                  {plan.price}
-                </span>
-                <span className="pb-1 text-sm text-muted">{plan.period}</span>
-              </div>
+              <span
+                className={cn(
+                  "inline-flex w-fit items-center gap-1.5 rounded-full border px-3 py-1.5 font-heading text-[11px] font-semibold uppercase tracking-wider",
+                  plan.highlighted
+                    ? "border-accent/50 bg-accent/10 text-accent"
+                    : "border-border bg-background text-muted",
+                )}
+              >
+                {plan.billing}
+              </span>
 
               <ul className="flex flex-1 flex-col gap-3.5">
                 {plan.benefits.map((benefit) => (
@@ -63,13 +66,14 @@ export function Plans() {
 
               <Button
                 href={buildWhatsAppLink(
-                  `Olá! Tenho interesse no plano ${plan.name} da Athlos Fit e quero fazer minha matrícula.`,
+                  `Olá! Tenho interesse no plano ${plan.name} da Athlos Fit e quero saber o valor.`,
                 )}
                 external
                 variant={plan.highlighted ? "primary" : "secondary"}
                 className="w-full"
               >
-                Quero este Plano
+                <MessageCircle size={16} />
+                Consultar valor
               </Button>
             </motion.div>
           ))}

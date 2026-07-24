@@ -21,7 +21,7 @@ const SECTIONS = [
   },
   {
     title: "4. Seus direitos",
-    body: `Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento entrando em contato pelo e-mail ${CONTACT.email}.`,
+    body: `Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento entrando em contato pelo WhatsApp ${CONTACT.whatsappDisplay}.`,
   },
   {
     title: "5. Cookies e tecnologias de rastreamento",

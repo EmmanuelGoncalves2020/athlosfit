@@ -1,6 +1,8 @@
 import {
   Activity,
+  Armchair,
   Baby,
+  Bell,
   CalendarCheck,
   CreditCard,
   Dumbbell,
@@ -8,9 +10,6 @@ import {
   HeartHandshake,
   ScanLine,
   Smartphone,
-  Snowflake,
-  SquareParking,
-  TrendingUp,
   Users,
   Clock,
   type LucideIcon,
@@ -18,7 +17,9 @@ import {
 
 export const ICONS: Record<string, LucideIcon> = {
   Activity,
+  Armchair,
   Baby,
+  Bell,
   CalendarCheck,
   CreditCard,
   Dumbbell,
@@ -26,9 +27,6 @@ export const ICONS: Record<string, LucideIcon> = {
   HeartHandshake,
   ScanLine,
   Smartphone,
-  Snowflake,
-  SquareParking,
-  TrendingUp,
   Users,
   Clock,
 };

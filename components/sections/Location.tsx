@@ -12,7 +12,7 @@ export function Location() {
         <SectionHeading
           eyebrow="Localização"
           title="Venha treinar com a gente"
-          description="Estrutura completa, fácil acesso e estacionamento próprio."
+          description="Estrutura completa e fácil acesso, aberta 24 horas."
           className="mb-16"
         />
 
@@ -63,7 +63,7 @@ export function Location() {
                     rel="noopener noreferrer"
                     className="mt-1 block text-sm text-muted transition-colors hover:text-accent"
                   >
-                    @athlosfit
+                    @academiaathlosfit
                   </a>
                 </div>
               </div>

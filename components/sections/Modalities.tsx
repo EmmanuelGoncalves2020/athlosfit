@@ -12,9 +12,6 @@ const GRADIENTS = [
   "from-[#240e0e] via-[#0a0a0a] to-[#050505]",
   "from-[#2f1212] via-[#0a0a0a] to-[#050505]",
   "from-[#210d0d] via-[#0a0a0a] to-[#050505]",
-  "from-[#331414] via-[#0a0a0a] to-[#050505]",
-  "from-[#260f0f] via-[#0a0a0a] to-[#050505]",
-  "from-[#2a1111] via-[#0a0a0a] to-[#050505]",
 ];
 
 export function Modalities() {
@@ -24,11 +21,11 @@ export function Modalities() {
         <SectionHeading
           eyebrow="Modalidades"
           title="Treine do seu jeito"
-          description="Sete formas de evoluir, todas com estrutura completa e professores especializados."
+          description="Musculação, boxe, dança e spinning, todas com estrutura completa e professores especializados."
           className="mb-16"
         />
 
-        <RevealGroup className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           {MODALITIES.map((mod, i) => (
             <motion.a
               key={mod.slug}
@@ -38,7 +35,7 @@ export function Modalities() {
               target="_blank"
               rel="noopener noreferrer"
               variants={revealChildVariants}
-              className={`group relative flex aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-gradient-to-br ${GRADIENTS[i % GRADIENTS.length]} sm:aspect-[3/4]`}
+              className={`group relative flex aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-gradient-to-br ${GRADIENTS[i % GRADIENTS.length]} sm:aspect-[4/5] lg:aspect-[16/11]`}
             >
               <div
                 aria-hidden

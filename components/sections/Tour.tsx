@@ -40,7 +40,7 @@ export function Tour() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="balance max-w-lg text-base text-muted sm:text-lg">
-                Musculação, funcional, lutas e muito mais. Veja de perto a estrutura que vai te
+                Musculação, boxe, dança e spinning. Veja de perto a estrutura que vai te
                 acompanhar todos os dias.
               </p>
             </Reveal>

@@ -11,7 +11,6 @@ export function OrganizationJsonLd() {
     image: `${SITE_URL}/opengraph-image`,
     logo: `${SITE_URL}/opengraph-image`,
     telephone: CONTACT.phoneDisplay,
-    email: CONTACT.email,
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
@@ -31,18 +30,13 @@ export function OrganizationJsonLd() {
           "Thursday",
           "Friday",
           "Saturday",
+          "Sunday",
         ],
         opens: "00:00",
         closes: "23:59",
       },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Sunday"],
-        opens: "08:00",
-        closes: "18:00",
-      },
     ],
-    sameAs: [CONTACT.social.instagram, CONTACT.social.facebook, CONTACT.social.youtube],
+    sameAs: [CONTACT.social.instagram],
   };
 
   return (

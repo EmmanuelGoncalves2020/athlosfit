@@ -1,32 +1,28 @@
 export const SITE_NAME = "ATHLOS FIT";
 export const SITE_URL = "https://www.athlosfit.com.br";
 export const SITE_DESCRIPTION =
-  "A academia mais moderna e tecnológica da cidade. Musculação, funcional, lutas, cross, pilates e personal em um ambiente premium, climatizado e aberto 24 horas.";
+  "Academia aberta 24 horas com musculação moderna, aulas coletivas de lutas, dança e spinning, Espaço Kids e estrutura premium em Nova Iguaçu, RJ.";
 
 export const CONTACT = {
-  whatsappNumber: "5511999999999",
-  whatsappDisplay: "(11) 99999-9999",
-  phoneDisplay: "(11) 4002-8922",
-  email: "contato@athlosfit.com.br",
+  whatsappNumber: "5521994414710",
+  whatsappDisplay: "(21) 99441-4710",
+  phoneDisplay: "(21) 99441-4710",
   address: {
-    street: "Av. das Nações, 1200",
-    district: "Jardim Europa",
-    city: "São Paulo",
-    state: "SP",
-    zip: "01452-000",
-    full: "Av. das Nações, 1200 – Jardim Europa, São Paulo – SP",
+    street: "Estr. Santa Bárbara, 87",
+    district: "Miguel Couto",
+    city: "Nova Iguaçu",
+    state: "RJ",
+    zip: "26070-401",
+    full: "Estr. Santa Bárbara, 87 – Miguel Couto, Nova Iguaçu – RJ",
   },
   hours: [
-    { label: "Segunda a Sexta", value: "24 horas" },
-    { label: "Sábado", value: "24 horas" },
-    { label: "Domingo e Feriados", value: "08h às 18h" },
+    { label: "Segunda a Sábado", value: "24 horas" },
+    { label: "Domingo e Feriados", value: "24 horas" },
   ],
   social: {
-    instagram: "https://instagram.com/athlosfit",
-    facebook: "https://facebook.com/athlosfit",
-    youtube: "https://youtube.com/@athlosfit",
+    instagram: "https://www.instagram.com/academiaathlosfit/",
   },
-  mapsLink: "https://maps.google.com/?q=Athlos+Fit+Academia",
+  mapsLink: "https://maps.google.com/?q=Athlos+Fit+Academia+Nova+Iguaçu",
 } as const;
 
 export const MAPS_EMBED_SRC = `https://www.google.com/maps?q=${encodeURIComponent(

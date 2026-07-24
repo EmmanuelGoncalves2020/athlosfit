@@ -1,14 +1,10 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { Logo } from "@/components/layout/Logo";
 import { NAV_LINKS } from "@/lib/data";
 import { CONTACT, SITE_NAME } from "@/lib/constants";
-import { FacebookIcon, InstagramIcon, YoutubeIcon } from "@/components/ui/social-icons";
+import { InstagramIcon } from "@/components/ui/social-icons";
 
-const SOCIALS = [
-  { icon: InstagramIcon, href: CONTACT.social.instagram, label: "Instagram" },
-  { icon: FacebookIcon, href: CONTACT.social.facebook, label: "Facebook" },
-  { icon: YoutubeIcon, href: CONTACT.social.youtube, label: "YouTube" },
-];
+const SOCIALS = [{ icon: InstagramIcon, href: CONTACT.social.instagram, label: "Instagram" }];
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -20,8 +16,8 @@ export function Footer() {
           <div className="flex flex-col gap-4 md:col-span-2">
             <Logo />
             <p className="max-w-sm text-sm leading-relaxed text-muted">
-              A academia mais moderna e tecnológica da cidade. Estrutura premium, professores
-              especializados e tecnologia para sua evolução, 24 horas por dia.
+              Musculação, boxe, dança e spinning em uma estrutura premium aberta 24 horas,
+              com Espaço Kids e app exclusivo para sua evolução.
             </p>
             <div className="flex items-center gap-3 pt-2">
               {SOCIALS.map(({ icon: Icon, href, label }) => (
@@ -66,10 +62,6 @@ export function Footer() {
               <li className="flex items-center gap-2.5">
                 <Phone size={16} className="shrink-0 text-accent" />
                 <span>{CONTACT.phoneDisplay}</span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Mail size={16} className="shrink-0 text-accent" />
-                <span>{CONTACT.email}</span>
               </li>
             </ul>
           </div>

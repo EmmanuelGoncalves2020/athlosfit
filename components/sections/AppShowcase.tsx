@@ -47,8 +47,8 @@ function ScreenAgenda() {
         ))}
       </div>
       <div className="rounded-xl border border-accent/30 bg-accent/10 px-3.5 py-3">
-        <p className="text-xs font-semibold text-white">Cross Training</p>
-        <p className="text-[10px] text-white/50">Hoje · 19h00 com Coach Renan</p>
+        <p className="text-xs font-semibold text-white">Spinning</p>
+        <p className="text-[10px] text-white/50">Hoje · 19h00</p>
       </div>
     </div>
   );

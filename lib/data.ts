@@ -21,44 +21,45 @@ export const DIFFERENTIALS = [
     icon: "GraduationCap",
     title: "Professores Especializados",
     description:
-      "Equipe certificada, presente no piso de treino para corrigir, ajustar e evoluir cada execução.",
+      "Equipe presente no piso de treino para corrigir, ajustar e evoluir cada execução.",
   },
   {
     icon: "Dumbbell",
     title: "Equipamentos Modernos",
     description:
-      "Máquinas de última geração e tecnologia biomecânica para máxima performance e segurança.",
+      "Máquinas modernas, seguras e ergonômicas, silenciosas e confortáveis para uma experiência de treino superior.",
   },
   {
-    icon: "Snowflake",
-    title: "Ambiente Climatizado",
+    icon: "Clock",
+    title: "Aberta 24 Horas",
     description:
-      "Climatização inteligente em todos os ambientes para treinar com conforto em qualquer estação.",
+      "Treine no seu horário: musculação e estrutura completa disponíveis 24 horas, todos os dias.",
   },
   {
-    icon: "SquareParking",
-    title: "Estacionamento",
-    description: "Vagas amplas e cobertas, com segurança 24 horas para você e seu veículo.",
+    icon: "Armchair",
+    title: "Cadeira de Massagem",
+    description: "Relaxe após o treino com nossa cadeira de massagem, disponível para os alunos.",
   },
   {
     icon: "Baby",
     title: "Espaço Kids",
-    description: "Ambiente monitorado e seguro para seus filhos enquanto você treina sem culpa.",
+    description:
+      "Ambiente seguro com brinquedos e atividades livres por até 1h30, para os pequenos se divertirem enquanto você treina.",
   },
   {
     icon: "Smartphone",
-    title: "App Exclusivo",
-    description: "Treinos, check-in, agenda e evolução na palma da mão, 100% integrado.",
+    title: "Athlos Fit App",
+    description: "Reserve aulas, acompanhe treinos, faça check-in e consulte pagamentos, tudo no app.",
   },
   {
     icon: "HeartHandshake",
-    title: "Wellhub",
-    description: "Aceitamos Wellhub (Gympass). Treine na Athlos Fit com o seu plano corporativo.",
+    title: "Wellhub & TotalPass",
+    description: "Aceitamos Wellhub (Gympass) e TotalPass. Treine na Athlos Fit com o seu plano corporativo.",
   },
   {
     icon: "Activity",
     title: "Avaliação Física",
-    description: "Diagnóstico completo e periódico para treinar com precisão e ver resultado real.",
+    description: "Acompanhamento periódico para treinar com precisão e ver resultado real.",
   },
 ] as const;
 
@@ -66,45 +67,30 @@ export const MODALITIES = [
   {
     slug: "musculacao",
     title: "Musculação",
-    tagline: "Força e volume",
+    tagline: "Equipamentos modernos",
     description:
-      "Estrutura completa com equipamentos de última geração para hipertrofia e performance.",
+      "Máquinas modernas, seguras e ergonômicas para treinos mais eficientes e uma experiência superior.",
   },
   {
-    slug: "funcional",
-    title: "Funcional",
-    tagline: "Movimento real",
-    description: "Treinos dinâmicos que desenvolvem força, mobilidade e resistência.",
+    slug: "boxe",
+    title: "Boxe",
+    tagline: "Técnica e energia",
+    description:
+      "Treino completo que combina técnica, força e descarga de energia. Em 45 minutos, você melhora o condicionamento, aprende golpes e libera o estresse.",
   },
   {
-    slug: "bike",
-    title: "Bike",
-    tagline: "Cardio de alta energia",
-    description: "Aulas coletivas com trilha sonora e iluminação que elevam sua performance.",
+    slug: "danca",
+    title: "Dança",
+    tagline: "Ritmo e movimento",
+    description:
+      "Aulas coletivas que unem música, movimento e queima calórica em um treino leve, divertido e motivador.",
   },
   {
-    slug: "lutas",
-    title: "Lutas",
-    tagline: "Disciplina e técnica",
-    description: "Muay Thai, boxe e jiu-jitsu com professores especializados em cada modalidade.",
-  },
-  {
-    slug: "cross",
-    title: "Cross",
-    tagline: "Alta performance",
-    description: "Treinamento funcional de alta intensidade para superar limites a cada sessão.",
-  },
-  {
-    slug: "personal",
-    title: "Personal",
-    tagline: "Treino sob medida",
-    description: "Acompanhamento individual com plano de treino 100% personalizado.",
-  },
-  {
-    slug: "pilates",
-    title: "Pilates",
-    tagline: "Equilíbrio e postura",
-    description: "Fortalecimento profundo, consciência corporal e alívio de tensões.",
+    slug: "spinning",
+    title: "Spinning",
+    tagline: "A energia que transforma seu dia",
+    description:
+      "Aulas coletivas intensas de 45 minutos, com ritmo, motivação e alto gasto calórico.",
   },
 ] as const;
 
@@ -120,7 +106,7 @@ export const TESTIMONIALS = [
     name: "Camila Duarte",
     role: "Aluna há 8 meses",
     quote:
-      "A avaliação física e o acompanhamento dos professores fizeram toda diferença no meu resultado.",
+      "O acompanhamento dos professores fez toda diferença no meu resultado. Recomendo muito.",
     rating: 5,
   },
   {
@@ -132,64 +118,61 @@ export const TESTIMONIALS = [
   {
     name: "Larissa Prado",
     role: "Aluna há 3 anos",
-    quote: "O app da Athlos Fit é sensacional. Agendo aula, faço check-in e acompanho evolução.",
+    quote: "O app da Athlos Fit é sensacional. Agendo aula, faço check-in e acompanho tudo pelo celular.",
     rating: 5,
   },
 ] as const;
 
 export const PLANS = [
   {
-    id: "start",
-    name: "START",
-    price: "129",
-    period: "/mês",
-    description: "Ideal para quem está começando a transformação.",
+    id: "one",
+    name: "ONE",
+    billing: "Mensal · sem fidelidade",
+    description: "Pague mês a mês, com total liberdade para cancelar quando quiser.",
     highlighted: false,
     benefits: [
-      "Acesso à musculação e cardio",
-      "1 avaliação física por trimestre",
-      "App exclusivo Athlos Fit",
-      "Acesso em horário comercial",
+      "Acesso total à estrutura 24h",
+      "Musculação, boxe, dança e spinning",
+      "Sem taxa de fidelidade",
+      "Cancele quando quiser",
     ],
   },
   {
-    id: "plus",
-    name: "PLUS",
-    price: "189",
-    period: "/mês",
-    description: "O equilíbrio perfeito entre estrutura e liberdade.",
+    id: "infinity",
+    name: "INFINITY",
+    billing: "Recorrente · fidelidade 12 meses",
+    description: "Cobrança automática e o melhor custo-benefício para quem quer constância.",
     highlighted: true,
     benefits: [
-      "Acesso 24 horas, todos os dias",
-      "Musculação, funcional, bike e lutas",
-      "Avaliação física mensal",
-      "App exclusivo + agendamento de aulas",
+      "Acesso total à estrutura 24h",
+      "Musculação, boxe, dança e spinning",
       "Espaço Kids incluso",
+      "Pagamento automático, sem burocracia",
+      "Melhor custo-benefício mensal",
     ],
   },
   {
-    id: "premium",
-    name: "PREMIUM",
-    price: "259",
-    period: "/mês",
-    description: "Performance máxima com acompanhamento próximo.",
+    id: "anual",
+    name: "ANUAL PADRÃO",
+    billing: "Pagamento antecipado",
+    description: "Um único pagamento e a maior economia do ano garantida.",
     highlighted: false,
     benefits: [
-      "Tudo do plano PLUS",
-      "2 sessões de personal trainer/mês",
-      "Pilates e cross ilimitados",
-      "Avaliação física quinzenal",
-      "Prioridade em aulas e horários",
+      "Acesso total à estrutura 24h",
+      "Musculação, boxe, dança e spinning",
+      "Espaço Kids incluso",
+      "Maior economia entre os planos",
+      "Ano todo garantido, sem mensalidade",
     ],
   },
 ] as const;
 
 export const APP_FEATURES = [
-  { icon: "Dumbbell", title: "Treinos", description: "Sua ficha de treino sempre atualizada." },
-  { icon: "CalendarCheck", title: "Agenda", description: "Reserve aulas e horários em segundos." },
-  { icon: "CreditCard", title: "Pagamento", description: "Mensalidade e planos sem burocracia." },
+  { icon: "Dumbbell", title: "Treinos", description: "Acompanhe sua ficha de treino sempre atualizada." },
+  { icon: "CalendarCheck", title: "Agenda", description: "Reserve aulas e consulte horários em segundos." },
+  { icon: "CreditCard", title: "Pagamento", description: "Consulte seu plano e pagamentos sem burocracia." },
   { icon: "ScanLine", title: "Check-in", description: "Entrada rápida por QR Code no totem." },
-  { icon: "TrendingUp", title: "Evolução", description: "Gráficos de performance e resultados." },
+  { icon: "Bell", title: "Novidades", description: "Alertas sobre aulas, eventos e novidades da academia." },
 ] as const;
 
 export const FAQ_ITEMS = [
@@ -199,28 +182,26 @@ export const FAQ_ITEMS = [
       "Não é obrigatório, mas recomendamos agendar sua visita ou aula experimental para garantir um atendimento exclusivo com um de nossos professores.",
   },
   {
-    question: "A Athlos Fit aceita Wellhub (Gympass)?",
+    question: "A Athlos Fit aceita Wellhub (Gympass) e TotalPass?",
     answer:
-      "Sim! Somos parceiros Wellhub. Basta apresentar seu check-in no aplicativo na recepção da unidade.",
+      "Sim! Somos parceiros Wellhub e TotalPass. Basta apresentar seu check-in no aplicativo na recepção da unidade.",
   },
   {
     question: "Qual o horário de funcionamento?",
-    answer:
-      "Nossa unidade funciona 24 horas de segunda a sábado, com acesso controlado por biometria. Aos domingos e feriados, funcionamos das 8h às 18h.",
+    answer: "Nossa unidade funciona 24 horas, todos os dias da semana, incluindo domingos e feriados.",
   },
   {
     question: "Tem espaço para deixar meus filhos durante o treino?",
     answer:
-      "Sim, contamos com o Espaço Kids, um ambiente seguro e monitorado por profissionais qualificados.",
+      "Sim, contamos com o Espaço Kids, um ambiente seguro com brinquedos e atividades livres por até 1h30.",
   },
   {
-    question: "Posso cancelar ou trocar de plano quando quiser?",
+    question: "Qual a diferença entre os planos ONE, Infinity e Anual Padrão?",
     answer:
-      "Sim, você pode fazer upgrade de plano a qualquer momento pelo app. Cancelamentos seguem o prazo contratual informado na matrícula.",
+      "O ONE é mensal e sem fidelidade, ideal para quem quer liberdade. O Infinity tem cobrança recorrente com fidelidade de 12 meses e o melhor custo-benefício mensal. O Anual Padrão é um pagamento único antecipado, com a maior economia do ano. Fale com a gente no WhatsApp para saber os valores.",
   },
   {
     question: "A academia oferece avaliação física?",
-    answer:
-      "Sim, todos os planos incluem avaliação física periódica para acompanhar sua evolução com precisão.",
+    answer: "Sim, oferecemos acompanhamento de avaliação física para treinar com mais precisão.",
   },
 ] as const;
