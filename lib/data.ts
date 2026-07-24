@@ -70,6 +70,7 @@ export const MODALITIES = [
     tagline: "Equipamentos modernos",
     description:
       "Máquinas modernas, seguras e ergonômicas para treinos mais eficientes e uma experiência superior.",
+    photo: "/gallery/musculacao-1.webp",
   },
   {
     slug: "boxe",
@@ -77,6 +78,7 @@ export const MODALITIES = [
     tagline: "Técnica e energia",
     description:
       "Treino completo que combina técnica, força e descarga de energia. Em 45 minutos, você melhora o condicionamento, aprende golpes e libera o estresse.",
+    photo: "/gallery/lutas.webp",
   },
   {
     slug: "danca",
@@ -84,6 +86,7 @@ export const MODALITIES = [
     tagline: "Ritmo e movimento",
     description:
       "Aulas coletivas que unem música, movimento e queima calórica em um treino leve, divertido e motivador.",
+    photo: null,
   },
   {
     slug: "spinning",
@@ -91,6 +94,7 @@ export const MODALITIES = [
     tagline: "A energia que transforma seu dia",
     description:
       "Aulas coletivas intensas de 45 minutos, com ritmo, motivação e alto gasto calórico.",
+    photo: "/gallery/spinning.webp",
   },
 ] as const;
 

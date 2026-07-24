@@ -1,59 +1,52 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Compass } from "lucide-react";
-import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Button } from "@/components/ui/Button";
 import { buildWhatsAppLink } from "@/lib/constants";
 
-export function Tour() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
+const TILES = [
+  { src: "/gallery/esteiras.webp", alt: "Corredor de esteiras da Athlos Fit" },
+  { src: "/gallery/kids.webp", alt: "Espaço Kids da Athlos Fit" },
+  { src: "/gallery/musculacao-2.webp", alt: "Área de musculação da Athlos Fit" },
+];
 
+export function Tour() {
   return (
     <section className="relative bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div
-          ref={ref}
-          className="relative isolate flex h-[70svh] min-h-[420px] items-center justify-center overflow-hidden rounded-3xl border border-border"
-        >
-          <motion.div
-            style={{ y }}
-            className="absolute inset-[-8%] bg-[radial-gradient(ellipse_60%_50%_at_30%_30%,rgba(154,42,42,0.2),transparent_60%),radial-gradient(ellipse_50%_50%_at_80%_70%,rgba(154,42,42,0.12),transparent_60%)] bg-[#0a0a0a]"
-          />
-          <div className="absolute inset-0 bg-grid opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
+        <SectionHeading
+          eyebrow="O espaço"
+          title="Cada canto pensado pra você treinar"
+          description="Musculação, boxe, dança, spinning e Espaço Kids. Veja de perto a estrutura que vai te acompanhar todos os dias."
+          align="left"
+          className="mb-12"
+        />
 
-          <div className="relative z-10 flex flex-col items-center gap-6 px-6 text-center">
-            <Reveal>
-              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-4 py-1.5 font-heading text-[11px] font-semibold uppercase tracking-[0.28em] text-accent backdrop-blur">
-                <Compass size={14} />
-                Tour Virtual
-              </span>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <h2 className="balance max-w-2xl font-display text-4xl leading-[0.95] tracking-wide text-foreground sm:text-6xl">
-                Conheça cada espaço antes de treinar
-              </h2>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <p className="balance max-w-lg text-base text-muted sm:text-lg">
-                Musculação, boxe, dança e spinning. Veja de perto a estrutura que vai te
-                acompanhar todos os dias.
-              </p>
-            </Reveal>
-            <Reveal delay={0.3}>
+        <div className="grid grid-cols-1 gap-4 sm:h-[560px] sm:grid-cols-3 sm:grid-rows-2">
+          <Reveal className="relative col-span-1 row-span-2 overflow-hidden rounded-2xl border border-border sm:col-span-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={TILES[0].src} alt={TILES[0].alt} className="h-64 w-full object-cover sm:h-full" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 flex flex-col items-start gap-4 p-6 sm:p-8">
               <Button
                 href={buildWhatsAppLink("Olá! Quero agendar um tour presencial na Athlos Fit.")}
                 external
-                size="lg"
               >
                 Fazer Tour
               </Button>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1} className="relative overflow-hidden rounded-2xl border border-border">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={TILES[1].src} alt={TILES[1].alt} className="h-48 w-full object-cover sm:h-full" />
+          </Reveal>
+
+          <Reveal delay={0.2} className="relative overflow-hidden rounded-2xl border border-border">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={TILES[2].src} alt={TILES[2].alt} className="h-48 w-full object-cover sm:h-full" />
+          </Reveal>
         </div>
       </div>
     </section>

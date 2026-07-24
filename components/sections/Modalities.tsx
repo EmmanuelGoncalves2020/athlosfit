@@ -7,13 +7,6 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RevealGroup, revealChildVariants } from "@/components/ui/Reveal";
 import { buildWhatsAppLink } from "@/lib/constants";
 
-const GRADIENTS = [
-  "from-[#2b1010] via-[#0a0a0a] to-[#050505]",
-  "from-[#240e0e] via-[#0a0a0a] to-[#050505]",
-  "from-[#2f1212] via-[#0a0a0a] to-[#050505]",
-  "from-[#210d0d] via-[#0a0a0a] to-[#050505]",
-];
-
 export function Modalities() {
   return (
     <section id="modalidades" className="relative bg-background py-24 sm:py-32">
@@ -26,7 +19,7 @@ export function Modalities() {
         />
 
         <RevealGroup className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          {MODALITIES.map((mod, i) => (
+          {MODALITIES.map((mod) => (
             <motion.a
               key={mod.slug}
               href={buildWhatsAppLink(
@@ -35,20 +28,29 @@ export function Modalities() {
               target="_blank"
               rel="noopener noreferrer"
               variants={revealChildVariants}
-              className={`group relative flex aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-gradient-to-br ${GRADIENTS[i % GRADIENTS.length]} sm:aspect-[4/5] lg:aspect-[16/11]`}
+              className="group relative flex aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-surface sm:aspect-[4/5] lg:aspect-[16/11]"
             >
-              <div
-                aria-hidden
-                className="absolute inset-0 bg-grid opacity-20 transition-transform duration-700 ease-out group-hover:scale-110"
-              />
-              <span
-                aria-hidden
-                className="pointer-events-none absolute -bottom-10 -right-6 select-none font-display text-[9rem] leading-none text-white/[0.04] transition-all duration-700 group-hover:text-accent/[0.08]"
-              >
-                0{i + 1}
-              </span>
+              {mod.photo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={mod.photo}
+                  alt=""
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+              ) : (
+                <>
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#2a1010] via-[#140a08] to-background" />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/brand/logo-mark-white.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -right-6 -top-6 h-[130%] w-auto object-contain opacity-[0.07] transition-opacity duration-700 group-hover:opacity-[0.12]"
+                  />
+                </>
+              )}
 
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/35 to-background/5" />
 
               <div className="relative z-10 mt-auto flex w-full flex-col gap-3 p-7">
                 <span className="font-heading text-[11px] font-semibold uppercase tracking-[0.25em] text-accent opacity-0 transition-all duration-500 group-hover:opacity-100">

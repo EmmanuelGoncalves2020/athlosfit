@@ -10,95 +10,68 @@ import { buildWhatsAppLink } from "@/lib/constants";
 const HEADLINE_LINES = ["O PRÓXIMO NÍVEL", "DA SUA EVOLUÇÃO", "COMEÇA HOJE."];
 
 export function Hero() {
-  const orb1Ref = useRef<HTMLDivElement>(null);
-  const orb2Ref = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLElement>(null);
+  const photoRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mediaQuery.matches) return;
+    if (mediaQuery.matches || !photoRef.current) return;
 
-    const section = sectionRef.current;
-    if (!section) return;
-
-    const xTo1 = gsap.quickTo(orb1Ref.current, "x", { duration: 1.4, ease: "power3.out" });
-    const yTo1 = gsap.quickTo(orb1Ref.current, "y", { duration: 1.4, ease: "power3.out" });
-    const xTo2 = gsap.quickTo(orb2Ref.current, "x", { duration: 1.8, ease: "power3.out" });
-    const yTo2 = gsap.quickTo(orb2Ref.current, "y", { duration: 1.8, ease: "power3.out" });
-
-    const handlePointerMove = (event: PointerEvent) => {
-      const { innerWidth, innerHeight } = window;
-      const relX = (event.clientX / innerWidth - 0.5) * 2;
-      const relY = (event.clientY / innerHeight - 0.5) * 2;
-      xTo1(relX * 40);
-      yTo1(relY * 40);
-      xTo2(relX * -28);
-      yTo2(relY * -28);
-    };
-
-    window.addEventListener("pointermove", handlePointerMove);
-
-    const floatTween = gsap.to([orb1Ref.current, orb2Ref.current], {
-      y: "+=24",
-      duration: 5,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-      stagger: 0.6,
-    });
+    const tween = gsap.fromTo(
+      photoRef.current,
+      { scale: 1.12 },
+      { scale: 1, duration: 5, ease: "power2.out" },
+    );
 
     return () => {
-      window.removeEventListener("pointermove", handlePointerMove);
-      floatTween.kill();
+      tween.kill();
     };
   }, []);
 
   return (
     <section
-      ref={sectionRef}
       id="home"
-      className="relative flex min-h-svh items-center justify-center overflow-hidden bg-background"
+      className="relative flex min-h-svh items-end overflow-hidden bg-background"
     >
-      <div className="pointer-events-none absolute inset-0">
-        <div
-          className="absolute inset-0 bg-grid opacity-60"
-          style={{
-            maskImage: "radial-gradient(ellipse 70% 60% at 50% 40%, black 10%, transparent 75%)",
-            WebkitMaskImage:
-              "radial-gradient(ellipse 70% 60% at 50% 40%, black 10%, transparent 75%)",
-          }}
+      <div className="absolute inset-0">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          ref={photoRef}
+          src="/gallery/recepcao.webp"
+          alt="Recepção da Athlos Fit"
+          className="h-full w-full object-cover"
         />
-        <div
-          ref={orb1Ref}
-          className="absolute left-[8%] top-[18%] h-[340px] w-[340px] rounded-full bg-accent/25 blur-[120px]"
-        />
-        <div
-          ref={orb2Ref}
-          className="absolute bottom-[10%] right-[10%] h-[420px] w-[420px] rounded-full bg-accent/15 blur-[140px]"
-        />
-        <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-background via-background/70 to-transparent" />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/75 to-background/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/10 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-background/90 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-8 px-5 pt-28 text-center sm:px-8">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/brand/logo-mark-white.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-10 bottom-0 hidden h-[85%] w-auto object-contain opacity-[0.14] mix-blend-luminosity sm:block md:opacity-[0.18]"
+      />
+
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-8 px-5 pb-20 pt-40 sm:px-8 sm:pb-24">
         <motion.span
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/70 px-4 py-1.5 font-heading text-[11px] font-semibold uppercase tracking-[0.28em] text-accent"
+          className="flex items-center gap-3 font-heading text-[11px] font-semibold uppercase tracking-[0.32em] text-accent"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_2px_rgba(154,42,42,0.8)]" />
-          Academia Premium · Aberta 24 horas
+          <span className="h-px w-8 bg-accent" />
+          Nova Iguaçu, RJ · Aberta 24 horas
         </motion.span>
 
-        <h1 className="font-display text-[15vw] leading-[0.92] tracking-wide text-foreground sm:text-7xl md:text-8xl lg:text-[7.5rem]">
+        <h1 className="max-w-4xl font-display text-[15vw] leading-[0.9] tracking-wide text-foreground sm:text-7xl md:text-8xl lg:text-[7rem]">
           {HEADLINE_LINES.map((line, i) => (
             <motion.span
               key={line}
               initial={{ opacity: 0, y: 44 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15 + i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-              className={i === 2 ? "block text-glow text-accent" : "block"}
+              className={i === 2 ? "block text-accent" : "block"}
             >
               {line}
             </motion.span>
@@ -109,17 +82,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="balance max-w-xl text-base text-muted sm:text-lg"
+          className="balance max-w-md text-base text-muted sm:text-lg"
         >
-          Treine em uma academia moderna, equipada e preparada para transformar sua rotina.
-          Tecnologia, estrutura e performance em cada detalhe.
+          Musculação, boxe, dança e spinning em uma estrutura que não para. Treine no seu
+          horário, com a estrutura completa da Athlos Fit.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col items-center gap-4 sm:flex-row"
+          className="flex flex-col items-start gap-4 sm:flex-row sm:items-center"
         >
           <Button
             href={buildWhatsAppLink("Olá! Quero agendar uma aula experimental na Athlos Fit.")}
@@ -141,7 +114,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.3, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-muted"
+        className="absolute bottom-6 right-5 z-10 hidden flex-col items-center gap-2 text-muted sm:right-8 sm:flex"
       >
         <span className="font-heading text-[10px] uppercase tracking-[0.3em]">Scroll</span>
         <motion.span
