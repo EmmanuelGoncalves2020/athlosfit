@@ -32,8 +32,7 @@ export const DIFFERENTIALS = [
   {
     icon: "Clock",
     title: "Aberta 24 Horas",
-    description:
-      "Treine no seu horário: musculação e estrutura completa disponíveis 24 horas, todos os dias.",
+    description: "Musculação e estrutura completa disponíveis 24 horas, de segunda a sexta.",
   },
   {
     icon: "Armchair",
@@ -45,11 +44,6 @@ export const DIFFERENTIALS = [
     title: "Espaço Kids",
     description:
       "Ambiente seguro com brinquedos e atividades livres por até 1h30, para os pequenos se divertirem enquanto você treina.",
-  },
-  {
-    icon: "Smartphone",
-    title: "Athlos Fit App",
-    description: "Reserve aulas, acompanhe treinos, faça check-in e consulte pagamentos, tudo no app.",
   },
   {
     icon: "HeartHandshake",
@@ -122,7 +116,7 @@ export const TESTIMONIALS = [
   {
     name: "Larissa Prado",
     role: "Aluna há 3 anos",
-    quote: "O app da Athlos Fit é sensacional. Agendo aula, faço check-in e acompanho tudo pelo celular.",
+    quote: "Ambiente limpo, equipamentos sempre em dia e uma equipe que trata a gente pelo nome.",
     rating: 5,
   },
 ] as const;
@@ -171,14 +165,6 @@ export const PLANS = [
   },
 ] as const;
 
-export const APP_FEATURES = [
-  { icon: "Dumbbell", title: "Treinos", description: "Acompanhe sua ficha de treino sempre atualizada." },
-  { icon: "CalendarCheck", title: "Agenda", description: "Reserve aulas e consulte horários em segundos." },
-  { icon: "CreditCard", title: "Pagamento", description: "Consulte seu plano e pagamentos sem burocracia." },
-  { icon: "ScanLine", title: "Check-in", description: "Entrada rápida por QR Code no totem." },
-  { icon: "Bell", title: "Novidades", description: "Alertas sobre aulas, eventos e novidades da academia." },
-] as const;
-
 export const FAQ_ITEMS = [
   {
     question: "Preciso agendar para conhecer a academia?",
@@ -188,11 +174,12 @@ export const FAQ_ITEMS = [
   {
     question: "A Athlos Fit aceita Wellhub (Gympass) e TotalPass?",
     answer:
-      "Sim! Somos parceiros Wellhub e TotalPass. Basta apresentar seu check-in no aplicativo na recepção da unidade.",
+      "Sim! Somos parceiros Wellhub e TotalPass. Basta apresentar seu check-in do aplicativo deles na recepção da unidade.",
   },
   {
     question: "Qual o horário de funcionamento?",
-    answer: "Nossa unidade funciona 24 horas, todos os dias da semana, incluindo domingos e feriados.",
+    answer:
+      "De segunda a sexta funcionamos 24 horas. Aos sábados, das 5h às 20h, e aos domingos e feriados, das 5h às 17h.",
   },
   {
     question: "Tem espaço para deixar meus filhos durante o treino?",

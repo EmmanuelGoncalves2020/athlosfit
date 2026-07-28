@@ -45,14 +45,6 @@ export function Hero() {
         <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-background/90 to-transparent" />
       </div>
 
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/brand/logo-mark-white.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-10 bottom-0 hidden h-[85%] w-auto object-contain opacity-[0.14] mix-blend-luminosity sm:block md:opacity-[0.18]"
-      />
-
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-8 px-5 pb-20 pt-40 sm:px-8 sm:pb-24">
         <motion.span
           initial={{ opacity: 0, y: -12 }}
@@ -61,7 +53,7 @@ export function Hero() {
           className="flex items-center gap-3 font-heading text-[11px] font-semibold uppercase tracking-[0.32em] text-accent"
         >
           <span className="h-px w-8 bg-accent" />
-          Nova Iguaçu, RJ · Aberta 24 horas
+          Nova Iguaçu, RJ · 24h de segunda a sexta
         </motion.span>
 
         <h1 className="max-w-4xl font-display text-[15vw] leading-[0.9] tracking-wide text-foreground sm:text-7xl md:text-8xl lg:text-[7rem]">

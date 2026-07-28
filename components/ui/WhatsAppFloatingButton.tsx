@@ -19,7 +19,7 @@ export function WhatsAppFloatingButton({
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
       className={cn(
-        "relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition-transform hover:bg-[#20BD5A] hover:scale-105 active:scale-95",
+        "flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition-transform hover:bg-[#20BD5A] hover:scale-105 active:scale-95",
         className,
       )}
       initial={{ opacity: 0, scale: 0.5, y: 20 }}

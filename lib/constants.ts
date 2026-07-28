@@ -1,7 +1,7 @@
 export const SITE_NAME = "ATHLOS FIT";
 export const SITE_URL = "https://www.athlosfit.com.br";
 export const SITE_DESCRIPTION =
-  "Academia aberta 24 horas com musculação moderna, aulas coletivas de lutas, dança e spinning, Espaço Kids e estrutura premium em Nova Iguaçu, RJ.";
+  "Academia aberta 24 horas de segunda a sexta, com musculação moderna, aulas coletivas de lutas, dança e spinning, Espaço Kids e estrutura premium em Nova Iguaçu, RJ.";
 
 export const CONTACT = {
   whatsappNumber: "5521994414710",
@@ -16,8 +16,9 @@ export const CONTACT = {
     full: "Estr. Santa Bárbara, 87 – Miguel Couto, Nova Iguaçu – RJ",
   },
   hours: [
-    { label: "Segunda a Sábado", value: "24 horas" },
-    { label: "Domingo e Feriados", value: "24 horas" },
+    { label: "Segunda a Sexta", value: "24 horas" },
+    { label: "Sábado", value: "05h às 20h" },
+    { label: "Domingo e Feriados", value: "05h às 17h" },
   ],
   social: {
     instagram: "https://www.instagram.com/academiaathlosfit/",

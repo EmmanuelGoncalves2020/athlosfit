@@ -16,8 +16,8 @@ export function Footer() {
           <div className="flex flex-col gap-4 md:col-span-2">
             <Logo />
             <p className="max-w-sm text-sm leading-relaxed text-muted">
-              Musculação, boxe, dança e spinning em uma estrutura premium aberta 24 horas,
-              com Espaço Kids e app exclusivo para sua evolução.
+              Musculação, boxe, dança e spinning em uma estrutura premium aberta 24 horas de
+              segunda a sexta, com Espaço Kids para toda a família.
             </p>
             <div className="flex items-center gap-3 pt-2">
               {SOCIALS.map(({ icon: Icon, href, label }) => (

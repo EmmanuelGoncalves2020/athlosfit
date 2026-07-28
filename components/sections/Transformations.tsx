@@ -2,16 +2,32 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import { Camera, ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import { TESTIMONIALS } from "@/lib/data";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Reveal } from "@/components/ui/Reveal";
+import { Reveal, RevealGroup, revealChildVariants } from "@/components/ui/Reveal";
 
-const METRICS = [
-  { label: "Força", before: 32, after: 78 },
-  { label: "Resistência", before: 40, after: 85 },
-  { label: "Composição corporal", before: 28, after: 74 },
+const PAIRS = [
+  { rotateBefore: -7, rotateAfter: 4 },
+  { rotateBefore: -4, rotateAfter: 7 },
+  { rotateBefore: -8, rotateAfter: 3 },
 ];
+
+function PolaroidPlaceholder({ label, rotate }: { label: string; rotate: number }) {
+  return (
+    <div
+      style={{ transform: `rotate(${rotate}deg)` }}
+      className="w-28 shrink-0 rounded-sm bg-[#f2ede4] p-2 pb-3 shadow-[0_12px_24px_-8px_rgba(0,0,0,0.6)] sm:w-32"
+    >
+      <div className="flex aspect-square items-center justify-center rounded-[2px] border border-dashed border-black/25 bg-black/5">
+        <Camera size={22} className="text-black/25" strokeWidth={1.5} />
+      </div>
+      <p className="mt-2 text-center font-heading text-[9px] font-semibold uppercase tracking-[0.15em] text-black/50">
+        {label}
+      </p>
+    </div>
+  );
+}
 
 export function Transformations() {
   const [index, setIndex] = useState(0);
@@ -32,47 +48,30 @@ export function Transformations() {
         <SectionHeading
           eyebrow="Resultados reais"
           title="Antes e Depois"
-          description="Transformações construídas com consistência, acompanhamento profissional e a estrutura certa."
-          className="mb-16"
+          description="Em breve, com autorização dos nossos alunos, mostramos as transformações de verdade."
+          className="mb-14"
         />
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <Reveal direction="left" className="rounded-2xl border border-border bg-surface p-8 sm:p-10">
-            <div className="mb-8 flex items-center justify-between">
-              <span className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-                Evolução média em 90 dias
-              </span>
-            </div>
-            <div className="flex flex-col gap-7">
-              {METRICS.map((metric) => (
-                <div key={metric.label}>
-                  <div className="mb-2 flex items-center justify-between font-heading text-xs uppercase tracking-wider text-foreground">
-                    <span>{metric.label}</span>
-                    <span className="text-accent">+{metric.after - metric.before}%</span>
-                  </div>
-                  <div className="relative h-2 w-full overflow-hidden rounded-full bg-background">
-                    <div
-                      className="absolute inset-y-0 left-0 rounded-full bg-white/15"
-                      style={{ width: `${metric.before}%` }}
-                    />
-                    <motion.div
-                      className="absolute inset-y-0 left-0 rounded-full bg-accent shadow-[0_0_16px_rgba(154,42,42,0.6)]"
-                      initial={{ width: `${metric.before}%` }}
-                      whileInView={{ width: `${metric.after}%` }}
-                      viewport={{ once: true, amount: 0.6 }}
-                      transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-                    />
-                  </div>
-                  <div className="mt-1.5 flex justify-between font-heading text-[10px] uppercase tracking-widest text-muted">
-                    <span>Antes</span>
-                    <span>Depois</span>
-                  </div>
+        <RevealGroup className="mb-16 flex flex-wrap items-start justify-center gap-x-10 gap-y-10 sm:gap-x-14">
+          {PAIRS.map((pair, i) => (
+            <motion.div key={i} variants={revealChildVariants} className="flex flex-col items-center">
+              <div className="relative h-40 w-40 sm:h-44 sm:w-44">
+                <div className="absolute left-0 top-2">
+                  <PolaroidPlaceholder label="Antes" rotate={pair.rotateBefore} />
                 </div>
-              ))}
-            </div>
-          </Reveal>
+                <div className="absolute bottom-0 right-0">
+                  <PolaroidPlaceholder label="Depois" rotate={pair.rotateAfter} />
+                </div>
+              </div>
+              <span className="mt-3 font-heading text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
+                Em breve
+              </span>
+            </motion.div>
+          ))}
+        </RevealGroup>
 
-          <Reveal direction="right" className="relative flex flex-col justify-between rounded-2xl border border-border bg-surface p-8 sm:p-10">
+        <Reveal className="mx-auto max-w-2xl">
+          <div className="relative flex flex-col justify-between rounded-2xl border border-border bg-surface p-8 sm:p-10">
             <Quote className="mb-4 h-9 w-9 text-accent/50" strokeWidth={1.5} />
 
             <AnimatePresence mode="wait">
@@ -131,8 +130,8 @@ export function Transformations() {
                 />
               ))}
             </div>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
