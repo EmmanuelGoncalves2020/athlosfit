@@ -15,6 +15,9 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="flex flex-col gap-4 md:col-span-2">
             <Logo />
+            <span className="font-heading text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+              Força, disciplina e superação
+            </span>
             <p className="max-w-sm text-sm leading-relaxed text-muted">
               Musculação, boxe, dança e spinning em uma estrutura premium aberta 24 horas de
               segunda a sexta, com Espaço Kids para toda a família.

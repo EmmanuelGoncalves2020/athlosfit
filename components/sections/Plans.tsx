@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, MessageCircle, Sparkles } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 import { PLANS } from "@/lib/data";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -16,17 +16,20 @@ export function Plans() {
         <SectionHeading
           eyebrow="Planos"
           title="Escolha o seu nível"
-          description="Todos os planos dão acesso à estrutura completa, 24 horas. A diferença está na forma de pagamento."
-          className="mb-16"
+          description="Estrutura completa em todos os planos. A diferença está no compromisso e na forma de pagamento."
+          className="mb-4"
         />
+        <p className="mb-16 text-center text-xs text-muted">
+          Aceitamos Pix, débito, crédito e dinheiro.
+        </p>
 
-        <RevealGroup className="grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
+        <RevealGroup className="grid grid-cols-1 items-start gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {PLANS.map((plan) => (
             <motion.div
               key={plan.id}
               variants={revealChildVariants}
               className={cn(
-                "relative flex flex-col gap-7 rounded-2xl border p-8 transition-all duration-500",
+                "relative flex flex-col gap-6 rounded-2xl border p-7 transition-all duration-500",
                 plan.highlighted
                   ? "border-accent/60 bg-surface shadow-[0_0_60px_-15px_rgba(154,42,42,0.4)] lg:-translate-y-4"
                   : "border-border bg-surface/50 hover:border-white/20",
@@ -40,8 +43,19 @@ export function Plans() {
               )}
 
               <div>
-                <h3 className="font-display text-3xl tracking-wide text-foreground">{plan.name}</h3>
+                <h3 className="font-display text-2xl tracking-wide text-foreground">{plan.name}</h3>
                 <p className="mt-1.5 text-sm text-muted">{plan.description}</p>
+              </div>
+
+              <div>
+                <div className="flex items-end gap-1.5">
+                  <span className="font-heading text-sm text-muted">R$</span>
+                  <span className="font-display text-5xl leading-none tracking-wide text-foreground">
+                    {plan.price}
+                  </span>
+                  <span className="pb-1 text-sm text-muted">{plan.period}</span>
+                </div>
+                <p className="mt-1.5 text-xs text-muted">{plan.note}</p>
               </div>
 
               <span
@@ -66,14 +80,13 @@ export function Plans() {
 
               <Button
                 href={buildWhatsAppLink(
-                  `Olá! Tenho interesse no plano ${plan.name} da Athlos Fit e quero saber o valor.`,
+                  `Olá! Tenho interesse no plano ${plan.name} da Athlos Fit e quero fazer minha matrícula.`,
                 )}
                 external
                 variant={plan.highlighted ? "primary" : "secondary"}
                 className="w-full"
               >
-                <MessageCircle size={16} />
-                Consultar valor
+                Quero este Plano
               </Button>
             </motion.div>
           ))}
